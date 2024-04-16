@@ -8,6 +8,15 @@ services:
       - MONGO_INITDB_DATABASE=location-svc
     ports:
       - 8081:27017
+  notification-svc-mongo:
+    image: mongo
+    restart: always
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=example
+      - MONGO_INITDB_DATABASE=notification-svc
+    ports:
+      - 9081:27017
   zoo1:
     image: confluentinc/cp-zookeeper:7.3.2
     hostname: zoo1
@@ -43,6 +52,3 @@ services:
       KAFKA_ALLOW_EVERYONE_IF_NO_ACL_FOUND: "true"
     depends_on:
       - zoo1
-
-
-
