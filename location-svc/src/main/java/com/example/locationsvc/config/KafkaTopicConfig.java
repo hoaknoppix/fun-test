@@ -23,6 +23,6 @@ public class KafkaTopicConfig {
 
   @Bean
   public NewTopic locationTopic() {
-    return new NewTopic("location", 1, (short) 1);
+    return new NewTopic("location-update", 1, (short) 1);
   }
 }
