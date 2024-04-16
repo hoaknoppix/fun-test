@@ -1,4 +1,4 @@
-package com.example.notificationsvc.dto;
+package com.example.taxisvc.client.dto;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

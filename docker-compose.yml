@@ -17,6 +17,15 @@ services:
       - MONGO_INITDB_DATABASE=notification-svc
     ports:
       - 9081:27017
+  taxi-svc-mongo:
+    image: mongo
+    restart: always
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=example
+      - MONGO_INITDB_DATABASE=taxi-svc
+    ports:
+      - 7081:27017
   zoo1:
     image: confluentinc/cp-zookeeper:7.3.2
     hostname: zoo1
